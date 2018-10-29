@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*  mixins */
+
+@mixin text-nowrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin text-nowrap-multi($lines: 2) {
+    text-overflow: ellipsis;
+    overflow:hidden;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+
+@mixin bg-img($url, $size: contain) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+@mixin center-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
